@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button class="add-button"><i class="fa fa-plus"></i></button>
+        <div class="statusList">
+            <select id="select">
+                <option value="">All groups</option>
+                <option value="Online Omuz">Online Omuz</option>
+                <option value="Soft Club">Soft Club</option>
+              </select>
+            <label name="inactiveListId" class="body-light color-white">Group</label>
+          </div>
+          <div class="Search">
+          
+            <input required="" type="text" name="text" autocomplete="off" class="inputSearch" id="inputSearch">
+            <button type="button" class="btnSearch color-white">
+              <i class="fa fa-search"></i>
+            </button>
+            <label class="labelSearch">Search</label>
+
+          </div>
+
+    </div>
+    <div class="container">
+        
+        
+    </div>
+    <dialog class="dialogAdd">
+        <form class="form" action="#">
+          <div class="form-title">Add</div>
+          <i class="fa fa-close" onclick="closeModal()"></i>
+          <div class="form-subtitle">Add card</div>
+          <div class="statusList ic2">
+            <select class="add-platdorm" style="width: 100%;">
+                <option value="Online Omuz">Online Omuz</option>
+                <option value="Soft Club">Soft Club</option>
+              </select>
+            <label name="inactiveListId" class="body-light color-white">Group</label>
+          </div>
+          <div class="form-input-container ic1">
+            <input name="firstname" class="form-input add-name" type="text" placeholder=" ">
+            <div class="cut"></div>
+            <label for="firstname" class="form-placeholder">Name Course</label>
+          </div>
+          <div class="form-input-container ic2">
+            <input name="lastname" class="form-input add-date" type="date" placeholder=" ">
+            <div class="cut"></div>
+            <label for="lastname" class="form-placeholder">Start of Course</label>
+          </div>
+          <div class="form-input-container ic2">
+            <input name="limit" class="form-input add-duration" type="number" placeholder=" ">
+            <div class="cut cut-short"></div>
+            <label for="limit" class="form-placeholder">Duration</label>
+          </div>
+          
+          <button type="text" class="submit addBtn">submit</button>
+        </form>
+      </dialog>
+      <!-- Edit -->
+      <dialog class="dialogEdit">
+        <form class="form" action="#">
+          <div class="form-title">Edit</div>
+          <i class="fa fa-close" onclick="closeModal()"></i>
+          <div class="form-subtitle">Edit card</div>
+          <div class="statusList ic2">
+            <select class="edit-platdorm" style="width: 100%;">
+                <option value="Online Omuz">Online Omuz</option>
+                <option value="Soft Club">Soft Club</option>
+              </select>
+            <label name="inactiveListId" class="body-light color-white">Group</label>
+          </div>
+          <div class="form-input-container ic1">
+            <input name="firstname" required class="form-input edit-name" type="text" placeholder=" ">
+            <div class="cut"></div>
+            <label for="firstname" class="form-placeholder">Name Course</label>
+          </div>
+          <div class="form-input-container ic2">
+            <input name="lastname"  required="" class="form-input edit-date" type="date" placeholder=" ">
+            <div class="cut"></div>
+            <label for="lastname" class="form-placeholder">Start of Course</label>
+          </div>
+          <div class="form-input-container ic2">
+            <input name="limit" required="" class="form-input edit-duration" type="number" placeholder=" ">
+            <div class="cut cut-short"></div>
+            <label for="limit" class="form-placeholder">Duration</label>
+          </div>
+          
+          <button type="text" class="submit editBtn">submit</button>
+        </form>
+      </dialog>
+      
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
